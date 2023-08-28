@@ -4,6 +4,8 @@
 
 package frc.robot.subsystems;
 
+import java.lang.annotation.Target;
+
 import edu.wpi.first.wpilibj.BuiltInAccelerometer;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -45,6 +47,7 @@ public class Drivetrain extends SubsystemBase {
     m_leftEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
     m_rightEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
     resetEncoders();
+    //targetHeading = m_gyro.getAngleZ();
   }
 
   public void arcadeDrive(double xaxisSpeed, double zaxisRotate) {
